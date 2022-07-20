@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-title" content="TetriX">
+        <meta name="application-name" content="TetriX">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#ffffff">
+        <title>TetriX</title>
+        <link rel="icon" type="image/ico" href="" sizes="256x246">
+        <link rel="apple-touch-icon" href="" sizes="256x246">
+        <link rel="shortcut icon" type="image/png" href=""/>
+        <link rel="preload" as="image" href="">
+
+        <link rel="stylesheet" href="/styles/style.css" type="text/css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div id="game-loading-overlay" class="loading-overlay">
+            <div id="game-loading-box" class="loading-box">
+            <span id="game-loading-text" class="loading-text">Loading</span>
+            <div id="game-loading-progress" class="loading-progress">
+                <div></div>
+            </div>
+            </div>
+        </div>
+
+        <div id="game-option-btn-list" class="option-btn-list">
+            <button id="game-restart-btn" >
+                <i class="fa fa-undo"></i>
+            </button>
+            <button id="game-toggle-pause-btn" >
+                <i class="fa fa-play" ></i>
+            </button>
+        </div>
+
+        <div class="title-cnt">
+            <h1 id="game-title" class="game-title"><span style="color: #FFC107">T</span>exi<span style="color: #CDDC39">T</span></h1>
+        </div>
+
+        <p id="game-status" class="game-status" >TexiT</p>
+
+        <div id="game-table" class="game-table">
+            <div id="game-points-pane" class="points-pane">
+                <span id="game-points-num" class="points-num" >0</span>
+                <br />
+                <i id="game-lives-icon" class="fa fa-heart lives-icon"></i>
+                <span id="game-lives-num">0</span>
+            </div>
+            
+            <div id="game-hold-piece" class="hold-piece-cnt">
+                <span><i id="game-hold-lock" class="fa fa-lock"></i> Hold</span>
+                <div id="game-hold-table" class="hold-table"></div>
+            </div>
+            
+            <div id="game-next" class="game-next">Next</div>
+        </div>
+
+        <div class="cdk-overlay-container -hide-dialog" id="dialog-container">
+			<div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+			<div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center">
+				<div id="cdk-overlay-15" class="cdk-overlay-pane" style="max-width: 80vw; position: static">
+					<div tabIndex="-1" aria-modal="true" class="md-dialog mat-dialog-container ng-tns-c49-32 ng-trigger ng-trigger-dialogContainer ng-star-inserted" id="mat-dialog-3" role="dialog" style="transform: none;">
+						<div _ngcontent-duv-c420="" class="fire-spinner-container fire-dialog">
+                            <div _ngcontent-duv-c420="" class="fire-dialog-header">
+                                <div _ngcontent-duv-c420="" class="fire-dialog-title">
+                                    <div class="title-cnt">
+                                        <h1 id="game-title" class="game-title">Welcome to <span style="color: #FFC107">T</span>exi<span style="color: #CDDC39">T</span></h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div _ngcontent-duv-c420="" class="fire-dialog-body-section">
+                                <div _ngcontent-duv-c420="" mode="aside" type="warning" class="ng-tns-c31-33 ng-star-inserted">
+                                    <div class="ng-tns-c31-33 fire-aside fire-callout fire-callout-opaque has-icon">
+                                        <div class="fire-callout-body" aria-live="assertive">
+                                            <h3>A Tetris Game but with European monuments as pieces.</h3>
+                                            <h3>Your best score: <span id="best-score-indi">0</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div _ngcontent-duv-c420="" class="fire-dialog-actions">
+                                <button id="start-easy-btn" _ngcontent-duv-c420="" mat-raised-button="" color="primary" class="mat-raised-button mat-button-base blue-stl">
+                                    <span class="mat-button-wrapper">Easy Mode</span>
+                                </button>
+                                <button id="start-btn" _ngcontent-duv-c420="" mat-raised-button="" color="red" class="mat-raised-button mat-button-base red-stl">
+                                    <span class="mat-button-wrapper">Normal Mode</span>
+                                </button>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <script src="/scripts/script.js"></script>
+    </body>
+</html>
